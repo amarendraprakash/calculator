@@ -1,20 +1,13 @@
-num1=int(input("Enter the number1:"))
-num2=int(input("Enter the number2:"))
-op=input("Enter the +,-,*,/,%,//,** :")
-if op== '+':
- print(num1+num2)
-elif op== '-':
- print(num1-num2)
-elif op== '*':
- print(num1*num2)
-elif op== '/':
- print(num1/num2)
-elif op=='%':
- print(num1%num2)
-elif op=='//':
- print(num1//num2)
-elif op=='**':
- print(num1**num2)
-else:
- print("Invalid Operator")
+import sys
+
+if len(sys.argv) != 3:
+    print("Usage: python sum.py <num1> <num2>")
+    sys.exit(1)
+
+num1 = int(sys.argv[1])
+num2 = int(sys.argv[2])
+
+result = num1 + num2
+print(f"The sum of {num1} and {num2} is {result}")
+
 
